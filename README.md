@@ -9,7 +9,7 @@ Fichier commun : [dmp.mem.tar.xz](https://hackropole.fr/filer/fcsc2020-forensics
 Auteur : alx
 
 
-Cette épreuve est découpée en trois parties :
+Cette épreuve est découpée en 7 parties :
 - [Académie de l’investigation - C’est la rentrée](README_1_7.md)
 - [Académie de l’investigation - Administration.](README_2_7.md)
 - [Académie de l’investigation - Premiers artéfacts](README_3_7.md)
