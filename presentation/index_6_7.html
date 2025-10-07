@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="fr">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #141</h3>
+                            <h2 class="section-title">Académie de l'investigation - Partage</h2>
+                            <p>
+                                Ce poste est connecté à un partage de fichiers distant utilisant le protocole
+                                <code>Server Message Block</code>. Vous devez retrouver :
+                            <ul>
+                                <li>Le nom du domaine (workgroup).</li>
+                                <li>Le nom de l’utilisateur et son mot de passe.</li>
+                            </ul>
+                            <strong>Note :</strong> le flag est au format
+                            <code>FCSC{domaine:user:pass}</code>.
+                            <br /><br />
+                            Cette épreuve a été découpée en sept parties :
+                            <ul>
+                                <li>Académie de l'investigation - C'est la rentrée.</li>
+                                <li>Académie de l’investigation - Administration.</li>
+                                <li>Académie de l’investigation - Premiers artéfacts.</li>
+                                <li>Académie de l’investigation - Porte dérobée.</li>
+                                <li>Académie de l’investigation - Rédaction.</li>
+                                <li><strong>Académie de l’investigation - Partage.</strong></li>
+                                <li>Académie de l’investigation - Dans les nuages.</li>
+                            </ul>
+                            </p>
+                            <h4>Fichiers à étudier:</h4>
+                            <p>
+                            <ul>
+                                <li>dmp.mem.tar.xz</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2020</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Lien officiel :
+                                <a target="_blank"
+                                    href="https://hackropole.fr/fr/challenges/forensics/fcsc2020-forensics-academie-de-l-investigation-6/">FCSC
+                                    2020 - Académie de l’investigation - Partage</a>
+                                <br />
+                                Auteur: alx
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Apprentissage</h3>
+                            <h2 class="section-title">Documentations et Vidéos</h2>
+                            <p class="section-subtitle">
+                                Aucune documentation pour le moment
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Aide</h3>
+                            <h2 class="section-title">Conseils et indices</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1176173464411979806">Fil sur
+                                    le Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Remonter en haut de la page" title="Remonter en tête de site"></a>
+    </div>
+</body>
+
+</html>
